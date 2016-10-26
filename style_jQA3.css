@@ -1,0 +1,57 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width:900px;
+}
+form{
+	display: inline-block;
+	width: 300px;
+	padding: 30px;
+	text-align: right;
+	vertical-align: top;
+}
+label, input{
+	padding: 5px;
+	margin: 5px;
+}
+	label:nth-of-type(3){
+		display: block;
+		text-align: left;
+		padding-top: 30px;
+	}
+	input:last-child{
+		display: block;
+		text-align: left;
+	}
+#contact_file{
+	display: inline-block;
+	width: 300px;
+	vertical-align: top;
+}
+	#contact_file div{
+		width: 350px;
+		height: 200px;
+		padding:5px;
+		margin: 15px auto;
+		border:1px solid blue;
+		vertical-align: top;
+	}
+		#contact_file h2{
+			display: block;
+			width: 300px;
+			padding: 10px 30px;
+			margin: 0 auto;
+		}
+		#contact_file div h5{
+			display: block;
+			width: 300px;
+			margin: 0 auto;
+		}
+		#contact_file h4{
+			display: inline;
+			width:300px;
+			height: auto;
+			padding: 20px;
+		}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Card - Adv.jQuery Assignment 3 </title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style_jQA3.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+	<script type="text/javascript">
+		function showDescrip(){
+			$(this).children("h2, h5").hide();
+			$(this).children("h4").show();
+			alert("calling function");
+		}
+
+		$(document).ready(function(){
+			$("#user_btn").on("click",function(){
+				var card = "<div class='box'><h2>"+ $("#first").val()+" "+$("#last").val()+"</h2>";
+					card +="<h5>Click for description!</h5>";
+					card +="<h4>"+$("#descrip").val()+"</h4></div>";
+				$("#contact_file").append(card);
+				$("h4").css({"width":"300px"});
+				$("h4").hide();
+
+				return false;
+			})
+			$("#contact_file").on("click", ".box",function(){
+				console.log('sanity check')
+					console.log($(this).children("h2, h5"));
+
+					$(this).children("h2, h5").hide();
+					$(this).children("h4").show();				})
+		})
+	</script>
+
+</head>
+<body>
+	<form>
+		<label>First Name:</label>
+		<input id="first" type="text">
+		<label>Last Name:</label>
+		<input id="last" type="text">
+		<label>Description:</label>
+		<textarea id="descrip" placeholder="Enter Description here...."></textarea>
+		<input id="user_btn" type="submit" value="Add User">
+	</form>
+	<div id="contact_file">	
+	</div>
+
+</body>
+</html>
